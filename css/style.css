@@ -12,6 +12,7 @@
     width:80vw;
     margin: auto;
     overflow-y: scroll;
+    border-radius:10px;
    
 .container::-webkit-scrollbar {
     width: 12px;
