@@ -16,8 +16,13 @@ io.on('connection', socket =>{
     })
 //jab user send pr click krke ek message bhejega to baaki sbko message receive hga
      socket.on('send', message =>{
-        socket.broadcast.emit('recieve', {message: message, username: users[socket.id]})
+        socket.broadcast.emit('receive', {message: message, username: users[socket.id]})
         
+        //jab user disconnect hoga to baaki sbko message receive hoga ki user disconnect hgya
+       
 })
-
+socket.on('disconnect', message =>{
+    socket.broadcast.emit('left', users[socket.id])
+    delete users[socket.id]
+    })
 })

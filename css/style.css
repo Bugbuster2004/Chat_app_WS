@@ -7,13 +7,20 @@
 }
 .container{
     border:2px solid black;
-    height:auto;
-    min-height: 60vh;
+    /* height:auto; */
+    height: 60vh;
     width:80vw;
     margin: auto;
     overflow-y: scroll;
+   
+.container::-webkit-scrollbar {
+    width: 12px;
 }
-
+}
+.container::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: 10px;
+}
 .message{
     border: 2px solid orange;
     margin: 1rem;
