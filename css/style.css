@@ -1,0 +1,70 @@
+.logo{
+    border:2px solid red;
+    width: 100px;
+    height: 100px;
+    margin:auto;
+    display: block;
+}
+.container{
+    border:2px solid black;
+    height:auto;
+    min-height: 60vh;
+    width:80vw;
+    margin: auto;
+    overflow-y: scroll;
+}
+
+.message{
+    border: 2px solid orange;
+    margin: 1rem;
+    height: auto;
+    width: 30%;
+    padding: 13px;
+    border-radius: 20px;
+    background-color: antiquewhite;
+}
+.left{
+    float:left;
+    clear:both;
+    
+}
+
+.right{
+    float: right;
+    clear: both;
+}
+
+/* //form */
+/* .send{
+    border: 2px solid orange;
+    margin: auto;
+    margin-top: 1rem;;
+    height: auto;
+    width: 80vw;
+    padding: 13px;
+    border-radius: 20px;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+
+ 
+#send-container{
+    /* border: 2px solid green; */
+    width: 80vw;
+    display: block;
+    margin: auto;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+#messageInput{
+    width:70vw;
+    border-radius: 20px;
+    height: auto;
+    height: 34px;
+}
+
+/* .btn{
+    width: 30px;
+    height: ;    
+} */
