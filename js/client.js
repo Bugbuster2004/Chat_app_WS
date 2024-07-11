@@ -3,6 +3,7 @@ const socket = io('http://localhost:8000')
 const form = document.getElementById('send-container');
 const messageInput = document.getElementById('messageInput');
 const messageContainer = document.querySelector(".container")
+const chatcontainer = document.querySelector(".notification")
 
 const append =(message, position) =>{
     const messageElement = document.createElement('div')
@@ -10,6 +11,22 @@ const append =(message, position) =>{
     messageElement.classList.add('message');
     messageElement.classList.add(position);
     messageContainer.append(messageElement)
+    //noti element
+ 
+
+
+}
+
+const appendnoti = (message) =>{
+    const notiElement = document.createElement('div')
+    notiElement.innerText = message;
+    notiElement.classList.add('noti');
+    chatcontainer.append(notiElement)
+    // const notiElement = document.createElement('div');
+    // notiElement.innerText = message;
+    // notiElement.classList.add('noti');
+    // notiElement.classList.add(position);
+    // chatcontainer.append(notiElement);
 }
 
 form.addEventListener('submit', (e) =>{
@@ -27,6 +44,12 @@ socket.emit('new-user-connected',username);
 
 socket.on('user-connected', username =>{
       append(`${username} joined the chat`, 'right')
+    //   append(`${username}`,'left')
+})
+
+socket.on('user-connected', username =>{
+    appendnoti(`${username}`);
+    //   append(`${username}`,'left')
 })
 
 //now we want the data sent by us to be recieved by the other persons in the chat box
